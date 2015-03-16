@@ -20,6 +20,9 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    [self.contentView setNeedsLayout];
+    [self.contentView layoutIfNeeded];
+    
     
     self.topLabel.preferredMaxLayoutWidth = [self.topLabel alignmentRectForFrame:self.topLabel.frame].size.width;
     self.middleLabel.preferredMaxLayoutWidth = [self.middleLabel alignmentRectForFrame:self.middleLabel.frame].size.width;
